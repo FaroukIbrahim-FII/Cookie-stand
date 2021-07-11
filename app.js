@@ -50,7 +50,7 @@ let tokyo = {
     AvgCookie: 1.2,
     tokyoCookiesArr: [0],
     getCust: function () {
-        return this.cust = random(23, 65);
+        return this.cust = random(3, 24);
         // console .log(this.cust);
     },
     // console.log(tokyo.getCust());
@@ -87,7 +87,7 @@ let dubai = {
     AvgCookie: 3.7,
     dubaiCookiesArr: [0],
     getCust: function () {
-        return this.cust = random(23, 65);
+        return this.cust = random(11, 38);
         // console .log(this.cust);
     },
     // console.log(dubai.getCust());
@@ -124,7 +124,7 @@ let paris = {
     AvgCookie:  2.3,
     parisCookiesArr: [0],
     getCust: function () {
-        return this.cust = random(23, 65);
+        return this.cust = random(20, 38);
         // console .log(this.cust);
     },
     // console.log(paris.getCust());
@@ -155,13 +155,13 @@ paris.render();
 
 let lima = {
     name: 'Lima',
-    min: 20,
-    max: 38,
+    min: 2,
+    max:  16,
     cust: 0,
-    AvgCookie:  2.3,
+    AvgCookie:  4.6,
     limaCookiesArr: [0],
     getCust: function () {
-        return this.cust = random(23, 65);
+        return this.cust = random(2, 16);
         // console .log(this.cust);
     },
     // console.log(lima.getCust());
