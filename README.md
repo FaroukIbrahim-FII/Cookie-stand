@@ -2,6 +2,6 @@
 
 ## Links and Resources
 
-* Rihan Foudeh & Haneen Haslamon helped me with solving this lab.
+* Rihan Foudeh & Haneen Haslamon helped me with solving lab-07.
 
 ## Author: Farouk Imad Ibrahim
