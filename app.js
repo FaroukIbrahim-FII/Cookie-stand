@@ -83,7 +83,7 @@ function tableHeader() {
 
 // Body
 function tableBody() {
-    for (let i = 0; i < Locations.length; i++) {
+    for (let i = 0; i < locationOpj.length; i++) {
         // creating
         let storeRow = document.createElement('tr');
         let td = document.createElement('td');
@@ -94,6 +94,8 @@ function tableBody() {
 
         //Locations Column
         td.textContent = locationOpj[i].Locations;
+
+        console.log(locationOpj);
 
         //Random values
         for (let x = 0; x < time.length; x++) {
@@ -134,3 +136,54 @@ function tableEnd() {
 tableHeader();
 tableBody();
 tableEnd();
+
+// getting form from HTML
+let form = document.getElementById('form');
+// console.log(form);
+
+// create an event listener
+form.addEventListener('submit', submitter);
+
+// create submitter function
+function submitter(name) {
+    name.preventDefault();
+
+    totalOfTotals=0;
+    name.totalCookiesDaily=0;
+    name.totfin=0;
+
+    let locationInput=name.target.locationField.value;
+    // console.log(locationInput);
+
+    let minInput = parseInt(name.target.minField.value);
+    // console.log(minInput);
+
+    let maxInput=parseInt(name.target.maxField.value);
+    // console.log(maxInput);
+
+    let avgInput=parseInt(name.target.avgField.value);
+    // console.log(avgInput);
+
+    let inputStore= new Store(locationInput,minInput,maxInput,avgInput);
+    inputStore.RandomNumber();
+    inputStore.CookiesNumAvg();
+
+    // console.log(locationOpj);
+
+    table.textContent='';
+
+    // console.log('inputStore',inputStore);
+
+
+    // console.log(locationOpj.length);
+
+    tableHeader();
+    tableBody();
+    tableEnd();
+
+
+}
+
+
+
+

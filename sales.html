@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/style.css">
 
 </head>
-<style>
+<!-- <style>
 
     table,tr,th,td{
         border: 1px solid black;
@@ -20,7 +20,7 @@
     
     
     
-    </style>
+    </style> -->
 
 <body>
     <header>
@@ -34,7 +34,27 @@
         </div>
     </header>
     <main>
-        <h2>Stores</h2>
+        <h2>Our Stores</h2><br><br>
+        <form id="form">
+            <fieldset>
+                <label for="locationField">Location: </label>
+                <input type="text" name="locationField" id="locationField" required>
+                <br><br>
+                <label for="minField">Minimum: </label>
+                <input type="number" name="minField" id="minField" required>
+                <br><br>
+                <label for="maxField">Maximum: </label>
+                <input type="number" name="maxField" id="maxField" required>
+                <br><br>
+                <label for="avgField">Average: </label>
+                <input type="integer" name="avgField" id="avgField" required>
+                <br><br>
+                <input type="submit" id="button">
+                <br><br>
+            </fieldset>
+        </form>
+
+
         <div>
             <table id="stores"></table>
         </div>
