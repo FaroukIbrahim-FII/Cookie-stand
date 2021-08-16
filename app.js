@@ -18,8 +18,8 @@ function Store(Locations, minOpj, maxOpj, avgOpj) {
     this.Avg = avgOpj;
 
     // storage
-    this.custNum = [];
-    this.cookiesNum = [];
+    this.custNum = []; // a random rumber for the customers every hour
+    this.cookiesNum = []; // random number for the cookies every hour
     this.totalCookiesDaily = 0;
     this.hourTotal = [];
     locationOpj.push(this);
@@ -55,20 +55,21 @@ for (let i = 0; i < locationOpj.length; i++) {
     locationOpj[i].CookiesNumAvg();
 };
 
+
+console.log(locationOpj);
 //  drawing HTML
 let table = document.getElementById('stores');
 
 // Head
 function tableHeader() {
     // creating
-    let storeRow = document.createElement('tr');
+    let storeRow = document.createElement('thead');
     let thTime = document.createElement('th');
 
     // append
     table.appendChild(storeRow);
     storeRow.appendChild(thTime);
-
-    thTime.textContent = '';//first cell
+    thTime.textContent = '';//first cell // thTime.textContent = ""; this will remove the th.
 
     for (let i = 0; i < time.length; i++) {
         let th = document.createElement('th');
@@ -77,7 +78,7 @@ function tableHeader() {
     }
     let thTot = document.createElement('th');
     storeRow.appendChild(thTot);
-    thTot.textContent = 'Daily Total';
+    thTot.textContent = 'Daily Location Total';
 
 }
 
@@ -101,7 +102,7 @@ function tableBody() {
         for (let x = 0; x < time.length; x++) {
             let td = document.createElement('td');
             storeRow.appendChild(td);
-            td.textContent = locationOpj[i].cookiesNum[x];
+            td.textContent = locationOpj[i].cookiesNum[x]; // locationOpj[0].cookiesNum[0] first try, locationOpj[0].cookiesNum[1] second, locationOpj[0].cookiesNum[2]
         }
         let tdTot = document.createElement('td');
         storeRow.appendChild(tdTot);
