@@ -21,7 +21,7 @@ function Store(Locations, minOpj, maxOpj, avgOpj) {
     this.custNum = []; // a random rumber for the customers every hour
     this.cookiesNum = []; // random number for the cookies every hour
     this.totalCookiesDaily = 0;
-    this.hourTotal = [];
+    // this.hourTotal = [];
     locationOpj.push(this);
 }
 
@@ -56,7 +56,7 @@ for (let i = 0; i < locationOpj.length; i++) {
 };
 
 
-console.log(locationOpj);
+console.log();
 //  drawing HTML
 let table = document.getElementById('stores');
 
