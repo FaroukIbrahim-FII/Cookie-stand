@@ -168,18 +168,13 @@ function submitter(name) {
     let inputStore= new Store(locationInput,minInput,maxInput,avgInput);
     inputStore.RandomNumber();
     inputStore.CookiesNumAvg();
-
     // console.log(locationOpj);
 
     table.textContent='';
 
     // console.log('inputStore',inputStore);
-
-
     // console.log(locationOpj.length);
     tableHeader();
     tableBody();
     tableEnd();
-
-
 }
