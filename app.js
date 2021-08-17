@@ -177,14 +177,9 @@ function submitter(name) {
 
 
     // console.log(locationOpj.length);
-
     tableHeader();
     tableBody();
     tableEnd();
 
 
 }
-
-
-
-
