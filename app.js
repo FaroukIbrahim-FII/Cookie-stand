@@ -154,21 +154,16 @@ function submitter(name) {
     name.totfin=0;
 
     let locationInput=name.target.locationField.value;
-    // console.log(locationInput);
 
     let minInput = parseInt(name.target.minField.value);
-    // console.log(minInput);
 
     let maxInput=parseInt(name.target.maxField.value);
-    // console.log(maxInput);
 
     let avgInput=parseInt(name.target.avgField.value);
-    // console.log(avgInput);
 
     let inputStore= new Store(locationInput,minInput,maxInput,avgInput);
     inputStore.RandomNumber();
     inputStore.CookiesNumAvg();
-    // console.log(locationOpj);
 
     table.textContent='';
 
